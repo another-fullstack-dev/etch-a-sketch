@@ -5,3 +5,22 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 384px;
+    height: 384px;
+}
+
+.container * {
+    border: 1px solid black;
+    width: 24px;
+    height: 24px;
+}
