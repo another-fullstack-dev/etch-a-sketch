@@ -19,18 +19,15 @@ function newGrid(){
     }
 
     let amount = prompt("How many squares per side? Maximum value is 100.");
-
+    
     if (amount > 100){
         return alert("Error. Value cant be higher than 100!");
     } else if (amount <= 0){
         return alert("Error. 0 or negative values aren't accepted.");
-    } else if (amount != typeof(1)){
-        return alert("Error. Please enter a number.");
     }
 
     let sides = 384 / amount;
     sides = sides.toString() + "px";
-    console.log(sides);
 
     for (let i = 0; i < amount * amount; i++){
         let div = document.createElement("div");
