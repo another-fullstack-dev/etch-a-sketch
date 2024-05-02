@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
+    background-color: rgb(215, 215, 215);
 }
 
 .container {
@@ -19,9 +20,10 @@ body {
     flex-wrap: wrap;
     width: 384px;
     height: 384px;
+    background-color: white;
 }
 
 .box {
-    border: 1px solid black;
+    
     flex: 1;
 }
