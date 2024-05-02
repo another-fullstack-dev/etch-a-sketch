@@ -23,7 +23,7 @@ function newGrid(){
     if (amount > 100){
         return alert("Error. Value cant be higher than 100!");
     } else if (amount <= 0){
-        return alert("Error. 0 or negative values arent accepted.");
+        return alert("Error. 0 or negative values aren't accepted.");
     }
 
     let sides = 384 / amount;
