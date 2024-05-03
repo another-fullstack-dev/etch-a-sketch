@@ -30,7 +30,6 @@ function newGrid(){
     sides = sides.toString() + "px";
 
     for (let i = 0; i < amount * amount; i++){
-        randomRGB(0, 255);
         let div = document.createElement("div");
         div.classList.add("box");
         div.style.minWidth = sides;
