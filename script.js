@@ -4,8 +4,6 @@ const CONTAINER_SIDE = 384;
 let firstRunSides = 384 / 16;
     firstRunSides = firstRunSides.toString() + "px";
 
-let rgb;
-
 for (let i = 0; i < 256; i++){
     let div = document.createElement("div");
     div.classList.add("box");
