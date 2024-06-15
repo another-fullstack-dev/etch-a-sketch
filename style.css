@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to left, lightgrey, grey);
+    background: radial-gradient(lightgrey, grey);
     height: 100vh;
 }
 
