@@ -22,13 +22,26 @@ function newGrid(){
     container.textContent = "";
     container.style.backgroundColor = "white";
 
-    if (this.textContent == "Rainbow grid") {
-        rgb = true;
-    } else {
-        rgb = false;
+    let amount = parseInt(prompt("How many squares per side? Maximum value is 100."));
+
+    // we cant use this in switch statement because we're javascript.
+    if (isNaN(amount)){ 
+        container.textContent = ":(";
+        container.style.backgroundColor = "cornflowerblue";
+        return alert("Error. Enter a valid number.");
     }
 
-    let amount = prompt("How many squares per side? Maximum value is 100.");
+    switch (amount){
+        case amount > 100:
+            container.textContent = ":(";
+            container.style.backgroundColor = "cornflowerblue";
+            return alert("Error. Value cant be higher than 100!");
+        
+        case amount <= 0:
+            container.textContent = ":(";
+            container.style.backgroundColor = "cornflowerblue";
+            return alert("Error. 0 or negative values aren't accepted.");
+    }
 
     if (amount > 100){
         container.textContent = ":("
@@ -38,6 +51,12 @@ function newGrid(){
         container.textContent = ":("
         container.style.backgroundColor = "cornflowerblue"
         return alert("Error. 0 or negative values aren't accepted.");
+    }
+
+    if (this.textContent == "Rainbow grid") {
+        rgb = true;
+    } else {
+        rgb = false;
     }
 
     let sides = CONTAINER_SIDE / amount;
