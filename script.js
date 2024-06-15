@@ -1,21 +1,28 @@
 const container = document.querySelector(".container");
-const button = document.querySelector(".btn-grid");
+const buttonGrid = document.querySelector(".btn-grid");
+const buttonRGB = document.querySelector(".btn-rainbow");
 const CONTAINER_SIDE = 384;
-let firstRunSides = 384 / 16;
-    firstRunSides = firstRunSides.toString() + "px";
+let firstRunSides = "24px";
+let rgb = false;
 
 for (let i = 0; i < 256; i++){
     let div = document.createElement("div");
     div.classList.add("box");
     div.style.minWidth = firstRunSides;
     div.style.minHeight = firstRunSides;
-    div.addEventListener("mouseenter", () => div.style.backgroundColor = randomRGB(0, 255));
+    div.addEventListener("mouseenter", () => div.style.backgroundColor = "black");
     container.appendChild(div);
 }
 
 function newGrid(){
     while(container.firstChild){
         container.removeChild(container.firstChild);
+    }
+
+    if (this.textContent == "Rainbow grid") {
+        rgb = true;
+    } else {
+        rgb = false;
     }
 
     let amount = prompt("How many squares per side? Maximum value is 100.");
@@ -26,7 +33,7 @@ function newGrid(){
         return alert("Error. 0 or negative values aren't accepted.");
     }
 
-    let sides = 384 / amount;
+    let sides = CONTAINER_SIDE / amount;
     sides = sides.toString() + "px";
 
     for (let i = 0; i < amount * amount; i++){
@@ -34,7 +41,13 @@ function newGrid(){
         div.classList.add("box");
         div.style.minWidth = sides;
         div.style.minHeight = sides;
-        div.addEventListener("mouseenter", () => div.style.backgroundColor = randomRGB(0, 255));
+
+        if (rgb) {
+            div.addEventListener("mouseenter", () => div.style.backgroundColor = randomRGB(0, 255));
+        } else {
+            div.addEventListener("mouseenter", () => div.style.backgroundColor = "black");
+        }
+        
         container.appendChild(div);
     }
 }
@@ -48,4 +61,9 @@ function randomRGB(min, max){
     return "rgb(" + r.toString() + ", " + g.toString() + ", " + b.toString() + ")"; 
 }
 
-button.addEventListener("click", newGrid);
+function rainbowMode(){
+
+}
+
+buttonGrid.addEventListener("click", newGrid);
+buttonRGB.addEventListener("click", newGrid);
