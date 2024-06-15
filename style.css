@@ -9,10 +9,10 @@
 body {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
-    background-color: rgb(215, 215, 215);
+    background: linear-gradient(to left, lightgrey, grey);
+    height: 100vh;
 }
 
 .container {
@@ -21,6 +21,25 @@ body {
     width: 384px;
     height: 384px;
     background-color: white;
+    
+}
+
+.mainframe {
+    position: relative;
+    right: 3vw;
+    display: flex;
+    gap: 12px;
+}
+
+.controls {
+    
+    margin-top: 6px;
+}
+
+.controls > * {
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
 }
 
 .box {
