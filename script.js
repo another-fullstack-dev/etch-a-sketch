@@ -2,14 +2,13 @@ const container = document.querySelector(".container");
 const buttonGrid = document.querySelector(".btn-grid");
 const buttonRGB = document.querySelector(".btn-rainbow");
 const CONTAINER_SIDE = 384;
-let firstRunSides = "24px";
 let rgb = false;
 
 for (let i = 0; i < 256; i++){
     let div = document.createElement("div");
     div.classList.add("box");
-    div.style.minWidth = firstRunSides;
-    div.style.minHeight = firstRunSides;
+    div.style.minWidth = "24px";
+    div.style.minHeight = "24px";
     div.addEventListener("mouseenter", () => div.style.backgroundColor = "black");
     container.appendChild(div);
 }
@@ -24,25 +23,6 @@ function newGrid(){
 
     let amount = parseInt(prompt("How many squares per side? Maximum value is 100."));
 
-    // we cant use this in switch statement because we're javascript.
-    if (isNaN(amount)){ 
-        container.textContent = ":(";
-        container.style.backgroundColor = "cornflowerblue";
-        return alert("Error. Enter a valid number.");
-    }
-
-    switch (amount){
-        case amount > 100:
-            container.textContent = ":(";
-            container.style.backgroundColor = "cornflowerblue";
-            return alert("Error. Value cant be higher than 100!");
-        
-        case amount <= 0:
-            container.textContent = ":(";
-            container.style.backgroundColor = "cornflowerblue";
-            return alert("Error. 0 or negative values aren't accepted.");
-    }
-
     if (amount > 100){
         container.textContent = ":("
         container.style.backgroundColor = "cornflowerblue"
@@ -51,6 +31,10 @@ function newGrid(){
         container.textContent = ":("
         container.style.backgroundColor = "cornflowerblue"
         return alert("Error. 0 or negative values aren't accepted.");
+    } else if (isNaN(amount)){ 
+        container.textContent = ":(";
+        container.style.backgroundColor = "cornflowerblue";
+        return alert("Error. Enter a valid number.");
     }
 
     if (this.textContent == "Rainbow grid") {
