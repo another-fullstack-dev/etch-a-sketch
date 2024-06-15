@@ -19,6 +19,9 @@ function newGrid(){
         container.removeChild(container.firstChild);
     }
 
+    container.textContent = "";
+    container.style.backgroundColor = "white";
+
     if (this.textContent == "Rainbow grid") {
         rgb = true;
     } else {
@@ -28,8 +31,12 @@ function newGrid(){
     let amount = prompt("How many squares per side? Maximum value is 100.");
 
     if (amount > 100){
+        container.textContent = ":("
+        container.style.backgroundColor = "cornflowerblue"
         return alert("Error. Value cant be higher than 100!");
     } else if (amount <= 0){
+        container.textContent = ":("
+        container.style.backgroundColor = "cornflowerblue"
         return alert("Error. 0 or negative values aren't accepted.");
     }
 
@@ -47,7 +54,7 @@ function newGrid(){
         } else {
             div.addEventListener("mouseenter", () => div.style.backgroundColor = "black");
         }
-        
+
         container.appendChild(div);
     }
 }
