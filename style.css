@@ -12,16 +12,47 @@
 
 :root {
     --border-color: 8px solid rgb(144, 59, 175);
+    --controls-background: rgb(101, 0, 129);
+}
+
+button {
+    background-color: rgb(144, 59, 175);
+    border: 2px solid rgb(144, 59, 175);
+    color: blanchedalmond;
+    padding: 8px;
+    border-radius: 5%;
+    font-family: monospace, system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background-color: rgb(167, 68, 203);
+    border: 2px solid rgb(167, 68, 203);
+}
+
+button:active {
+    background-color: rgb(193, 80, 234);
+    border: 2px solid rgb(193, 80, 234);
 }
 
 body {
-    font-family: system-ui, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: linear-gradient(rgb(33, 0, 60), rgb(5, 0, 9));
     height: 100vh;
+    font-size: 1rem;
+}
+
+.bg {
+    position: fixed;
+    width: 85vw;
+    top: 12vh;
+    opacity: 0.1;
+    transform: rotate(90deg);
+    z-index: -1;
 }
 
 .container {
@@ -63,7 +94,7 @@ body {
 
 .controls-body {
     position: relative;
-    background-color: rgb(218, 219, 209);
+    background-color: var(--controls-background);
     min-height: 100px; /* retarded i know */
     max-height: 100px;
     border-left: var(--border-color);
@@ -74,7 +105,7 @@ body {
 .controls-bottom {
     min-height: 150px; /* border.. */
     min-width: 150px;
-    background-color: rgb(218, 219, 209);
+    background-color: var(--controls-background);
     border-left: var(--border-color);
     border-right: var(--border-color);
 }
