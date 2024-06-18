@@ -15,6 +15,18 @@
     --controls-background: rgb(101, 0, 129);
 }
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(rgb(33, 0, 60), rgb(5, 0, 9));
+    height: 100vh;
+    font-family: monospace, system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
 button {
     background-color: rgb(144, 59, 175);
     border: 2px solid rgb(144, 59, 175);
@@ -24,6 +36,7 @@ button {
     font-family: monospace, system-ui, sans-serif;
     font-weight: bold;
     font-size: 1.1rem;
+    width: 70%;
 }
 
 button:hover {
@@ -34,16 +47,6 @@ button:hover {
 button:active {
     background-color: rgb(193, 80, 234);
     border: 2px solid rgb(193, 80, 234);
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: linear-gradient(rgb(33, 0, 60), rgb(5, 0, 9));
-    height: 100vh;
-    font-size: 1rem;
 }
 
 .bg {
@@ -64,7 +67,6 @@ body {
     font-family: "Segoe UI";
     font-size: 128px;
     color: white;
-    border-radius: 10%;
     overflow: hidden;
     border: var(--border-color);
 }
@@ -120,6 +122,17 @@ body {
     border-bottom-left-radius: 25%;
     border-bottom-right-radius: 25%;
     border-bottom: var(--border-color);
+}
+
+.border-radius-label {
+    color: blanchedalmond;
+    background-color: rgb(144, 59, 175);
+    border-radius: 5%;
+    text-align: center;
+    padding: 8px;
+    width: 70%;
+    margin-bottom: 0px;
+    font-size: 1.1rem;
 }
 
 .box {

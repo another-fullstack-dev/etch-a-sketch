@@ -1,8 +1,10 @@
 const container = document.querySelector(".container");
 const buttonGrid = document.querySelector(".btn-grid");
 const buttonRGB = document.querySelector(".btn-rainbow");
+const borderRange = document.querySelector("#border-radius-range");
 const CONTAINER_SIDE = 384;
 let rgb = false;
+container.style.borderRadius = borderRange.value + "%";
 
 for (let i = 0; i < 256; i++){
     let div = document.createElement("div");
@@ -75,5 +77,10 @@ function rainbowMode(){
 
 }
 
+function borderRadius(){
+    container.style.borderRadius = this.value + "%";
+}
+
 buttonGrid.addEventListener("click", newGrid);
 buttonRGB.addEventListener("click", newGrid);
+borderRange.addEventListener("change", borderRadius);
