@@ -58,7 +58,7 @@ function newGrid(){
         if (rgb) {
             div.addEventListener("mouseenter", () => div.style.backgroundColor = randomRGB(0, 255));
         } else {
-            div.addEventListener("mouseenter", () => div.style.backgroundColor = "black");
+            div.addEventListener("mouseenter", () => div.style.backgroundColor = colorPicker.value);
         }
 
         container.appendChild(div);

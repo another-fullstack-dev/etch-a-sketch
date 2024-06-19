@@ -125,10 +125,31 @@ button:active {
     border-bottom: var(--border-color);
 }
 
+.brr-div,
+.color-pick-div {
+    background-color: rgb(124, 51, 150);
+}
+
+.brr-div > *,
+.color-pick-div > * {
+    margin: auto;
+}
+
+.color-pick-div {
+    padding-bottom: 8px;
+}
+
+#color-picker {
+    margin-left: 30%; /* margin auto doesnt do shit. why? */
+}
+
+#border-radius-range {
+    margin-left: 2px;
+}
+
 label {
+    display: block;
     color: blanchedalmond;
-    background-color: rgb(144, 59, 175);
-    border-radius: 5%;
     text-align: center;
     padding: 8px;
     width: 70%;
