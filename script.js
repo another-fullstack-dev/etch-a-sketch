@@ -1,3 +1,4 @@
+// is it even a good practice to declare everything like this?
 const container = document.querySelector(".container");
 const buttonGrid = document.querySelector(".btn-grid");
 const buttonRGB = document.querySelector(".btn-rainbow");
