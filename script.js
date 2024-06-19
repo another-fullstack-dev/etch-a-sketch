@@ -83,4 +83,4 @@ function borderRadius(){
 
 buttonGrid.addEventListener("click", newGrid);
 buttonRGB.addEventListener("click", newGrid);
-borderRange.addEventListener("change", borderRadius);
+borderRange.addEventListener("input", borderRadius);
