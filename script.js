@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const buttonGrid = document.querySelector(".btn-grid");
 const buttonRGB = document.querySelector(".btn-rainbow");
 const borderRange = document.querySelector("#border-radius-range");
+const colorPicker = document.querySelector("#color-picker");
 const CONTAINER_SIDE = 384;
 let rgb = false;
 container.style.borderRadius = borderRange.value + "%";
@@ -11,7 +12,7 @@ for (let i = 0; i < 256; i++){
     div.classList.add("box");
     div.style.minWidth = "24px";
     div.style.minHeight = "24px";
-    div.addEventListener("mouseenter", () => div.style.backgroundColor = "black");
+    div.addEventListener("mouseenter", () => div.style.backgroundColor = colorPicker.value);
     container.appendChild(div);
 }
 

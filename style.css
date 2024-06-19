@@ -125,7 +125,7 @@ button:active {
     border-bottom: var(--border-color);
 }
 
-.border-radius-label {
+label {
     color: blanchedalmond;
     background-color: rgb(144, 59, 175);
     border-radius: 5%;
