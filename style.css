@@ -66,6 +66,7 @@ button:active {
     background-color: white;
     font-family: "Segoe UI";
     font-size: 128px;
+    font-weight: lighter;
     color: white;
     overflow: hidden;
     border: var(--border-color);
